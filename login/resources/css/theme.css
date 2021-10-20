@@ -1,0 +1,55 @@
+:root {
+    color: var(--color-fg-default);
+    background-color: var(--color-canvas-default);
+}
+
+body {
+    height: 100vh;
+}
+
+.login-form {
+    width: 340px;
+}
+
+#kc-page-title {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+#kc-username {
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+
+/* Input validation */
+
+input.form-control[aria-invalid="true"] {
+    border-color: var(--color-danger-emphasis);
+}
+
+.note.invalid {
+    color: var(--color-danger-fg);
+}
+
+
+/* Flash alerts */
+.flash.alert-error {
+    color: var(--color-fg-default);
+    background-image: linear-gradient(var(--color-danger-subtle), var(--color-danger-subtle));
+    border-color: var(--color-danger-muted);
+}
+
+.flash.alert-warning {
+    color: var(--color-fg-default);
+    background-image: linear-gradient(var(--color-attention-subtle), var(--color-attention-subtle));
+    border-color: var(--color-attention-muted);
+}
+
+.flash.alert-success {
+    color: var(--color-fg-default);
+    background-image: linear-gradient(var(--color-success-subtle), var(--color-success-subtle));
+    border-color: var(--color-success-muted);
+}
