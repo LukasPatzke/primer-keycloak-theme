@@ -90,23 +90,22 @@
                         <div id="kc-username" class="${properties.kcFormGroupClass!}">
                             <label id="kc-attempted-username">${auth.attemptedUsername}</label>
                             <a id="reset-login" href="${url.loginRestartFlowUrl}">
-                                <div class="kc-login-tooltip">
+                                <span class="kc-login-tooltip ${properties.kcTooltipClass!}" aria-label="${msg("restartLoginTooltip")}">
                                     <i class="${properties.kcResetFlowIcon!}"></i>
-                                    <span class="kc-tooltip-text">${msg("restartLoginTooltip")}</span>
-                                </div>
+                                </span>
                             </a>
                         </div>
                     </div>
                 </div>
             <#else>
                 <#nested "show-username">
-                <div id="kc-username" class="${properties.kcFormGroupClass!}">
+                <div id="kc-username" class="${properties.kcFormGroupClass!} ${properties.kcUsernameClass!}">
+                    <i class="${properties.kcUserIcon!}"></i>
                     <label id="kc-attempted-username">${auth.attemptedUsername}</label>
                     <a id="reset-login" href="${url.loginRestartFlowUrl}">
-                        <div class="kc-login-tooltip">
+                        <span class="kc-login-tooltip ${properties.kcTooltipClass!}" aria-label="${msg("restartLoginTooltip")}">
                             <i class="${properties.kcResetFlowIcon!}"></i>
-                            <span class="kc-tooltip-text">${msg("restartLoginTooltip")}</span>
-                        </div>
+                        </span>
                     </a>
                 </div>
             </#if>
