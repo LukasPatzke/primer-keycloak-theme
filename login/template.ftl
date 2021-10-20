@@ -49,8 +49,12 @@
             <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
                 <div class="${properties.kcLocaleMainClass!}" id="kc-locale">
                     <div id="kc-locale-wrapper" class="${properties.kcLocaleWrapperClass!}">
-                        <div id="kc-locale-dropdown" class="${properties.kcLocaleDropDownClass!}">
-                            <a href="#" id="kc-current-locale-link">${locale.current}</a>
+                        <#--  INSERT details and summary  -->
+                        <details id="kc-locale-dropdown" class="${properties.kcLocaleDropDownClass!}">
+                            <summary href="#" id="kc-current-locale-link" aria-haspopup="true">
+                                ${locale.current}
+                                <div class="dropdown-caret"></div>
+                            </summary>
                             <ul class="${properties.kcLocaleListClass!}">
                                 <#list locale.supported as l>
                                     <li class="${properties.kcLocaleListItemClass!}">
@@ -58,7 +62,7 @@
                                     </li>
                                 </#list>
                             </ul>
-                        </div>
+                        </details>
                     </div>
                 </div>
             </#if>
